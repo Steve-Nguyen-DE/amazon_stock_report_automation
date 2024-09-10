@@ -1,0 +1,23 @@
+[2024-09-09T20:46:27.796+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: run_daily_order_update_dag.dbt_run manual__2024-09-09T20:45:57.532354+00:00 [queued]>
+[2024-09-09T20:46:27.803+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: run_daily_order_update_dag.dbt_run manual__2024-09-09T20:45:57.532354+00:00 [queued]>
+[2024-09-09T20:46:27.803+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2024-09-09T20:46:27.811+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): dbt_run> on 2024-09-09 20:45:57.532354+00:00
+[2024-09-09T20:46:27.814+0000] {standard_task_runner.py:57} INFO - Started process 574 to run task
+[2024-09-09T20:46:27.816+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'run_daily_order_update_dag', 'dbt_run', 'manual__2024-09-09T20:45:57.532354+00:00', '--job-id', '264', '--raw', '--subdir', 'DAGS_FOLDER/run_daily_order_update.py', '--cfg-path', '/tmp/tmpdcwgdu1a']
+[2024-09-09T20:46:27.818+0000] {standard_task_runner.py:85} INFO - Job 264: Subtask dbt_run
+[2024-09-09T20:46:27.846+0000] {task_command.py:415} INFO - Running <TaskInstance: run_daily_order_update_dag.dbt_run manual__2024-09-09T20:45:57.532354+00:00 [running]> on host 2c451b520589
+[2024-09-09T20:46:27.887+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='run_daily_order_update_dag' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2024-09-09T20:45:57.532354+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-09T20:45:57.532354+00:00'
+[2024-09-09T20:46:27.888+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-09T20:46:27.889+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'docker exec dbt_container dbt run']
+[2024-09-09T20:46:27.898+0000] {subprocess.py:86} INFO - Output:
+[2024-09-09T20:46:27.930+0000] {subprocess.py:93} INFO - Error response from daemon: Container fda4d9906ea3b44c47a712859358154c3755e8b25b1d58974b86de5e8d968467 is restarting, wait until the container is running
+[2024-09-09T20:46:27.931+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2024-09-09T20:46:27.937+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2024-09-09T20:46:27.939+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=run_daily_order_update_dag, task_id=dbt_run, execution_date=20240909T204557, start_date=20240909T204627, end_date=20240909T204627
+[2024-09-09T20:46:27.946+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 264 for task dbt_run (Bash command failed. The command returned a non-zero exit code 1.; 574)
+[2024-09-09T20:46:27.960+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2024-09-09T20:46:28.016+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check

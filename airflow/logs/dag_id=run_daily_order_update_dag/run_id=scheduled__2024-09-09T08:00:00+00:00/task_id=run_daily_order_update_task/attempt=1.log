@@ -1,0 +1,35 @@
+[2024-09-09T10:40:27.738+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: run_daily_order_update_dag.run_daily_order_update_task scheduled__2024-09-09T08:00:00+00:00 [queued]>
+[2024-09-09T10:40:27.742+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: run_daily_order_update_dag.run_daily_order_update_task scheduled__2024-09-09T08:00:00+00:00 [queued]>
+[2024-09-09T10:40:27.742+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2024-09-09T10:40:27.749+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): run_daily_order_update_task> on 2024-09-09 08:00:00+00:00
+[2024-09-09T10:40:27.752+0000] {standard_task_runner.py:57} INFO - Started process 180 to run task
+[2024-09-09T10:40:27.755+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'run_daily_order_update_dag', 'run_daily_order_update_task', 'scheduled__2024-09-09T08:00:00+00:00', '--job-id', '239', '--raw', '--subdir', 'DAGS_FOLDER/run_daily_order_update.py', '--cfg-path', '/tmp/tmp8bngbodj']
+[2024-09-09T10:40:27.757+0000] {standard_task_runner.py:85} INFO - Job 239: Subtask run_daily_order_update_task
+[2024-09-09T10:40:27.797+0000] {task_command.py:415} INFO - Running <TaskInstance: run_daily_order_update_dag.run_daily_order_update_task scheduled__2024-09-09T08:00:00+00:00 [running]> on host 2c451b520589
+[2024-09-09T10:40:27.848+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='run_daily_order_update_dag' AIRFLOW_CTX_TASK_ID='run_daily_order_update_task' AIRFLOW_CTX_EXECUTION_DATE='2024-09-09T08:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-09T08:00:00+00:00'
+[2024-09-09T10:40:27.851+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-09T10:40:27.852+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'docker exec python-scripts-container python3 /opt/python_scripts/run_fetch_raw_amazon_Orders.py']
+[2024-09-09T10:40:27.858+0000] {subprocess.py:86} INFO - Output:
+[2024-09-09T10:40:40.526+0000] {subprocess.py:93} INFO - fetching data from 2024-09-09 07:46:06 and 2024-09-09 10:10:28
+[2024-09-09T10:40:40.531+0000] {subprocess.py:93} INFO - {'BuyerInfo': {'BuyerEmail': 'f3syvlmcg40sjdv@marketplace.amazon.com'}, 'AmazonOrderId': '114-7789068-9117857', 'EarliestShipDate': '2024-09-07T06:59:59Z', 'SalesChannel': 'Amazon.com', 'OrderStatus': 'Shipped', 'NumberOfItemsShipped': 1, 'OrderType': 'StandardOrder', 'IsPremiumOrder': False, 'IsPrime': False, 'FulfillmentChannel': 'AFN', 'NumberOfItemsUnshipped': 0, 'HasRegulatedItems': False, 'IsReplacementOrder': 'false', 'IsSoldByAB': False, 'LatestShipDate': '2024-09-07T06:59:59Z', 'ShipServiceLevel': 'Expedited', 'IsISPU': False, 'MarketplaceId': 'ATVPDKIKX0DER', 'PurchaseDate': '2024-09-06T02:48:28Z', 'ShippingAddress': {'StateOrRegion': 'AZ', 'PostalCode': '85335-6270', 'City': 'EL MIRAGE', 'CountryCode': 'US'}, 'IsAccessPointOrder': False, 'SellerOrderId': '114-7789068-9117857', 'PaymentMethod': 'Other', 'IsBusinessOrder': False, 'OrderTotal': {'CurrencyCode': 'USD', 'Amount': '10.92'}, 'PaymentMethodDetails': ['Standard'], 'IsGlobalExpressEnabled': False, 'LastUpdateDate': '2024-09-09T08:30:45Z', 'ShipmentServiceLevelCategory': 'Expedited'}
+[2024-09-09T10:40:40.532+0000] {subprocess.py:93} INFO - next_token: None
+[2024-09-09T10:40:40.532+0000] {subprocess.py:93} INFO - chunk finished
+[2024-09-09T10:40:40.532+0000] {subprocess.py:93} INFO - Status Code: 200
+[2024-09-09T10:40:40.533+0000] {subprocess.py:93} INFO - 1 chunk fetched succesfully!
+[2024-09-09T10:40:40.533+0000] {subprocess.py:93} INFO - sleeping for 5 seconds to avoid exceed rate limit
+[2024-09-09T10:40:40.533+0000] {subprocess.py:93} INFO - fetched order_items of 1 orders
+[2024-09-09T10:40:40.534+0000] {subprocess.py:93} INFO - fetched order_items of 2 orders
+[2024-09-09T10:40:40.534+0000] {subprocess.py:93} INFO - fetched order_items of 3 orders
+[2024-09-09T10:40:40.534+0000] {subprocess.py:93} INFO - fetched order_items of 4 orders
+[2024-09-09T10:40:40.534+0000] {subprocess.py:93} INFO - fetched order_items of 5 orders
+[2024-09-09T10:40:40.534+0000] {subprocess.py:93} INFO - fetched order_items of 6 orders
+[2024-09-09T10:40:40.535+0000] {subprocess.py:93} INFO - Finished!!!
+[2024-09-09T10:40:40.535+0000] {subprocess.py:93} INFO - there are totally 6 orders fetched
+[2024-09-09T10:40:40.535+0000] {subprocess.py:93} INFO - start exporting orders
+[2024-09-09T10:40:40.535+0000] {subprocess.py:93} INFO - Inserted/updated 6 records into the table "vne_dtw"."raw_amazon"."Orders"
+[2024-09-09T10:40:40.535+0000] {subprocess.py:93} INFO - start exporting order_items
+[2024-09-09T10:40:40.536+0000] {subprocess.py:93} INFO - Inserted/updated 10 records into the table "vne_dtw"."raw_amazon"."OrderItems"
+[2024-09-09T10:40:40.579+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-09T10:40:40.633+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=run_daily_order_update_dag, task_id=run_daily_order_update_task, execution_date=20240909T080000, start_date=20240909T104027, end_date=20240909T104040
+[2024-09-09T10:40:40.660+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-09-09T10:40:40.671+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,145 @@
+[2024-09-09T06:00:00.997+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: run_daily_order_update_dag.run_daily_order_update_task scheduled__2024-09-09T04:00:00+00:00 [queued]>
+[2024-09-09T06:00:01.002+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: run_daily_order_update_dag.run_daily_order_update_task scheduled__2024-09-09T04:00:00+00:00 [queued]>
+[2024-09-09T06:00:01.003+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2024-09-09T06:00:01.009+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): run_daily_order_update_task> on 2024-09-09 04:00:00+00:00
+[2024-09-09T06:00:01.015+0000] {standard_task_runner.py:57} INFO - Started process 646 to run task
+[2024-09-09T06:00:01.018+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'run_daily_order_update_dag', 'run_daily_order_update_task', 'scheduled__2024-09-09T04:00:00+00:00', '--job-id', '228', '--raw', '--subdir', 'DAGS_FOLDER/run_daily_order_update.py', '--cfg-path', '/tmp/tmp5pxtesz7']
+[2024-09-09T06:00:01.021+0000] {standard_task_runner.py:85} INFO - Job 228: Subtask run_daily_order_update_task
+[2024-09-09T06:00:01.074+0000] {task_command.py:415} INFO - Running <TaskInstance: run_daily_order_update_dag.run_daily_order_update_task scheduled__2024-09-09T04:00:00+00:00 [running]> on host 2c451b520589
+[2024-09-09T06:00:01.136+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='run_daily_order_update_dag' AIRFLOW_CTX_TASK_ID='run_daily_order_update_task' AIRFLOW_CTX_EXECUTION_DATE='2024-09-09T04:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-09T04:00:00+00:00'
+[2024-09-09T06:00:01.138+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-09T06:00:01.139+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'docker exec python-scripts-container python3 /opt/python_scripts/run_fetch_raw_amazon_Orders.py']
+[2024-09-09T06:00:01.147+0000] {subprocess.py:86} INFO - Output:
+[2024-09-09T06:02:40.260+0000] {subprocess.py:93} INFO - fetching data from 2024-09-05 11:12:50 and 2024-09-09 05:30:01
+[2024-09-09T06:02:40.267+0000] {subprocess.py:93} INFO - {'BuyerInfo': {'BuyerEmail': 'yps3bbgc6yfltlw@marketplace.amazon.com'}, 'AmazonOrderId': '111-9232712-8909028', 'EarliestShipDate': '2024-09-05T06:59:59Z', 'SalesChannel': 'Amazon.com', 'OrderStatus': 'Shipped', 'NumberOfItemsShipped': 1, 'OrderType': 'StandardOrder', 'IsPremiumOrder': False, 'IsPrime': False, 'FulfillmentChannel': 'AFN', 'NumberOfItemsUnshipped': 0, 'HasRegulatedItems': False, 'IsReplacementOrder': 'false', 'IsSoldByAB': False, 'LatestShipDate': '2024-09-05T06:59:59Z', 'ShipServiceLevel': 'Expedited', 'IsISPU': False, 'MarketplaceId': 'ATVPDKIKX0DER', 'PurchaseDate': '2024-09-05T01:39:06Z', 'ShippingAddress': {'StateOrRegion': 'NC', 'PostalCode': '28023-8332', 'City': 'CHINA GROVE', 'CountryCode': 'US'}, 'IsAccessPointOrder': False, 'SellerOrderId': '111-9232712-8909028', 'PaymentMethod': 'Other', 'IsBusinessOrder': False, 'OrderTotal': {'CurrencyCode': 'USD', 'Amount': '10.69'}, 'PaymentMethodDetails': ['Standard'], 'IsGlobalExpressEnabled': False, 'LastUpdateDate': '2024-09-05T15:40:38Z', 'ShipmentServiceLevelCategory': 'Expedited'}
+[2024-09-09T06:02:40.268+0000] {subprocess.py:93} INFO - next_token: HTP97vDwV7R/YYuZQbKv1QafEPREmauvizt1MIhPYZaTYAG1QW2mBWaPkPxFtJ3Go62SwD7KilpTg2dsYWmzKd8ytOVgN7d/KyNtf5fepe0z86MVYTeRn8zwQ+urGUc50TX/zXa5t0GS68vI7Bqws+weLxD7b1CVWLVMrapfx5DVUpivTdaPG//TUSEbJeY1llhc4XvGqg5e0zIeaOVNezxWEXvdeDL7lkmlyvXi83Y1KEvk64A7+wQTPgDbbuAncVkxA+q0fZYwE7+t4NjazyEZY027dXAVTSGshRBy6ZTthhfBGj6Dwh9DV8iyDXzG25news0zC1zgBxiyTVLFZVPLXG758iKnngxD6DuHjaKZMg2QhtOIF67DnKha1gczO7FuWYXfoY2F0jjse4YWg4EDUrIQbaP8ei0dfx060xAhEi1HJ7Iubuye+Q6Gwolr
+[2024-09-09T06:02:40.268+0000] {subprocess.py:93} INFO - {'BuyerInfo': {'BuyerEmail': '7nmfnk5xk1lbvdx@marketplace.amazon.com'}, 'AmazonOrderId': '111-2844709-9622610', 'EarliestShipDate': '2024-09-08T06:59:59Z', 'SalesChannel': 'Amazon.com', 'OrderStatus': 'Shipped', 'NumberOfItemsShipped': 1, 'OrderType': 'StandardOrder', 'IsPremiumOrder': False, 'IsPrime': False, 'FulfillmentChannel': 'AFN', 'NumberOfItemsUnshipped': 0, 'HasRegulatedItems': False, 'IsReplacementOrder': 'false', 'IsSoldByAB': False, 'LatestShipDate': '2024-09-08T06:59:59Z', 'ShipServiceLevel': 'Expedited', 'IsISPU': False, 'MarketplaceId': 'ATVPDKIKX0DER', 'PurchaseDate': '2024-09-08T03:37:28Z', 'ShippingAddress': {'StateOrRegion': 'Texas', 'PostalCode': '79508', 'City': 'Buffalo Gap', 'CountryCode': 'US'}, 'IsAccessPointOrder': False, 'SellerOrderId': '111-2844709-9622610', 'PaymentMethod': 'Other', 'IsBusinessOrder': False, 'OrderTotal': {'CurrencyCode': 'USD', 'Amount': '19.47'}, 'PaymentMethodDetails': ['Standard'], 'IsGlobalExpressEnabled': False, 'LastUpdateDate': '2024-09-09T05:20:43Z', 'ShipmentServiceLevelCategory': 'Expedited'}
+[2024-09-09T06:02:40.269+0000] {subprocess.py:93} INFO - next_token: None
+[2024-09-09T06:02:40.269+0000] {subprocess.py:93} INFO - chunk finished
+[2024-09-09T06:02:40.269+0000] {subprocess.py:93} INFO - Status Code: 200
+[2024-09-09T06:02:40.269+0000] {subprocess.py:93} INFO - 1 chunk fetched succesfully!
+[2024-09-09T06:02:40.270+0000] {subprocess.py:93} INFO - sleeping for 5 seconds to avoid exceed rate limit
+[2024-09-09T06:02:40.270+0000] {subprocess.py:93} INFO - fetched order_items of 1 orders
+[2024-09-09T06:02:40.270+0000] {subprocess.py:93} INFO - fetched order_items of 2 orders
+[2024-09-09T06:02:40.270+0000] {subprocess.py:93} INFO - fetched order_items of 3 orders
+[2024-09-09T06:02:40.270+0000] {subprocess.py:93} INFO - fetched order_items of 4 orders
+[2024-09-09T06:02:40.271+0000] {subprocess.py:93} INFO - fetched order_items of 5 orders
+[2024-09-09T06:02:40.271+0000] {subprocess.py:93} INFO - fetched order_items of 6 orders
+[2024-09-09T06:02:40.271+0000] {subprocess.py:93} INFO - fetched order_items of 7 orders
+[2024-09-09T06:02:40.271+0000] {subprocess.py:93} INFO - fetched order_items of 8 orders
+[2024-09-09T06:02:40.271+0000] {subprocess.py:93} INFO - fetched order_items of 9 orders
+[2024-09-09T06:02:40.272+0000] {subprocess.py:93} INFO - fetched order_items of 10 orders
+[2024-09-09T06:02:40.272+0000] {subprocess.py:93} INFO - fetched order_items of 11 orders
+[2024-09-09T06:02:40.272+0000] {subprocess.py:93} INFO - fetched order_items of 12 orders
+[2024-09-09T06:02:40.272+0000] {subprocess.py:93} INFO - fetched order_items of 13 orders
+[2024-09-09T06:02:40.273+0000] {subprocess.py:93} INFO - fetched order_items of 14 orders
+[2024-09-09T06:02:40.273+0000] {subprocess.py:93} INFO - fetched order_items of 15 orders
+[2024-09-09T06:02:40.273+0000] {subprocess.py:93} INFO - fetched order_items of 16 orders
+[2024-09-09T06:02:40.273+0000] {subprocess.py:93} INFO - fetched order_items of 17 orders
+[2024-09-09T06:02:40.274+0000] {subprocess.py:93} INFO - fetched order_items of 18 orders
+[2024-09-09T06:02:40.274+0000] {subprocess.py:93} INFO - fetched order_items of 19 orders
+[2024-09-09T06:02:40.274+0000] {subprocess.py:93} INFO - fetched order_items of 20 orders
+[2024-09-09T06:02:40.274+0000] {subprocess.py:93} INFO - fetched order_items of 21 orders
+[2024-09-09T06:02:40.275+0000] {subprocess.py:93} INFO - fetched order_items of 22 orders
+[2024-09-09T06:02:40.275+0000] {subprocess.py:93} INFO - fetched order_items of 23 orders
+[2024-09-09T06:02:40.275+0000] {subprocess.py:93} INFO - fetched order_items of 24 orders
+[2024-09-09T06:02:40.276+0000] {subprocess.py:93} INFO - fetched order_items of 25 orders
+[2024-09-09T06:02:40.276+0000] {subprocess.py:93} INFO - fetched order_items of 26 orders
+[2024-09-09T06:02:40.276+0000] {subprocess.py:93} INFO - fetched order_items of 27 orders
+[2024-09-09T06:02:40.276+0000] {subprocess.py:93} INFO - fetched order_items of 28 orders
+[2024-09-09T06:02:40.276+0000] {subprocess.py:93} INFO - fetched order_items of 29 orders
+[2024-09-09T06:02:40.277+0000] {subprocess.py:93} INFO - fetched order_items of 30 orders
+[2024-09-09T06:02:40.277+0000] {subprocess.py:93} INFO - fetched order_items of 31 orders
+[2024-09-09T06:02:40.277+0000] {subprocess.py:93} INFO - fetched order_items of 32 orders
+[2024-09-09T06:02:40.277+0000] {subprocess.py:93} INFO - fetched order_items of 33 orders
+[2024-09-09T06:02:40.277+0000] {subprocess.py:93} INFO - fetched order_items of 34 orders
+[2024-09-09T06:02:40.278+0000] {subprocess.py:93} INFO - fetched order_items of 35 orders
+[2024-09-09T06:02:40.278+0000] {subprocess.py:93} INFO - fetched order_items of 36 orders
+[2024-09-09T06:02:40.278+0000] {subprocess.py:93} INFO - fetched order_items of 37 orders
+[2024-09-09T06:02:40.278+0000] {subprocess.py:93} INFO - fetched order_items of 38 orders
+[2024-09-09T06:02:40.278+0000] {subprocess.py:93} INFO - fetched order_items of 39 orders
+[2024-09-09T06:02:40.279+0000] {subprocess.py:93} INFO - fetched order_items of 40 orders
+[2024-09-09T06:02:40.279+0000] {subprocess.py:93} INFO - fetched order_items of 41 orders
+[2024-09-09T06:02:40.279+0000] {subprocess.py:93} INFO - fetched order_items of 42 orders
+[2024-09-09T06:02:40.279+0000] {subprocess.py:93} INFO - fetched order_items of 43 orders
+[2024-09-09T06:02:40.280+0000] {subprocess.py:93} INFO - fetched order_items of 44 orders
+[2024-09-09T06:02:40.280+0000] {subprocess.py:93} INFO - fetched order_items of 45 orders
+[2024-09-09T06:02:40.280+0000] {subprocess.py:93} INFO - fetched order_items of 46 orders
+[2024-09-09T06:02:40.280+0000] {subprocess.py:93} INFO - fetched order_items of 47 orders
+[2024-09-09T06:02:40.281+0000] {subprocess.py:93} INFO - fetched order_items of 48 orders
+[2024-09-09T06:02:40.281+0000] {subprocess.py:93} INFO - fetched order_items of 49 orders
+[2024-09-09T06:02:40.281+0000] {subprocess.py:93} INFO - fetched order_items of 50 orders
+[2024-09-09T06:02:40.282+0000] {subprocess.py:93} INFO - fetched order_items of 51 orders
+[2024-09-09T06:02:40.282+0000] {subprocess.py:93} INFO - fetched order_items of 52 orders
+[2024-09-09T06:02:40.282+0000] {subprocess.py:93} INFO - fetched order_items of 53 orders
+[2024-09-09T06:02:40.283+0000] {subprocess.py:93} INFO - fetched order_items of 54 orders
+[2024-09-09T06:02:40.283+0000] {subprocess.py:93} INFO - fetched order_items of 55 orders
+[2024-09-09T06:02:40.283+0000] {subprocess.py:93} INFO - An error occure! status_code : 429
+[2024-09-09T06:02:40.283+0000] {subprocess.py:93} INFO - status_code: 429
+[2024-09-09T06:02:40.284+0000] {subprocess.py:93} INFO - exceeded rate limit, sleeping for 30  seconds before retry 2th time
+[2024-09-09T06:02:40.284+0000] {subprocess.py:93} INFO - fetched order_items of 56 orders
+[2024-09-09T06:02:40.284+0000] {subprocess.py:93} INFO - fetched order_items of 57 orders
+[2024-09-09T06:02:40.284+0000] {subprocess.py:93} INFO - fetched order_items of 58 orders
+[2024-09-09T06:02:40.285+0000] {subprocess.py:93} INFO - fetched order_items of 59 orders
+[2024-09-09T06:02:40.285+0000] {subprocess.py:93} INFO - fetched order_items of 60 orders
+[2024-09-09T06:02:40.285+0000] {subprocess.py:93} INFO - fetched order_items of 61 orders
+[2024-09-09T06:02:40.286+0000] {subprocess.py:93} INFO - fetched order_items of 62 orders
+[2024-09-09T06:02:40.286+0000] {subprocess.py:93} INFO - fetched order_items of 63 orders
+[2024-09-09T06:02:40.286+0000] {subprocess.py:93} INFO - fetched order_items of 64 orders
+[2024-09-09T06:02:40.286+0000] {subprocess.py:93} INFO - fetched order_items of 65 orders
+[2024-09-09T06:02:40.287+0000] {subprocess.py:93} INFO - fetched order_items of 66 orders
+[2024-09-09T06:02:40.287+0000] {subprocess.py:93} INFO - fetched order_items of 67 orders
+[2024-09-09T06:02:40.287+0000] {subprocess.py:93} INFO - fetched order_items of 68 orders
+[2024-09-09T06:02:40.287+0000] {subprocess.py:93} INFO - fetched order_items of 69 orders
+[2024-09-09T06:02:40.287+0000] {subprocess.py:93} INFO - fetched order_items of 70 orders
+[2024-09-09T06:02:40.288+0000] {subprocess.py:93} INFO - fetched order_items of 71 orders
+[2024-09-09T06:02:40.288+0000] {subprocess.py:93} INFO - fetched order_items of 72 orders
+[2024-09-09T06:02:40.288+0000] {subprocess.py:93} INFO - fetched order_items of 73 orders
+[2024-09-09T06:02:40.288+0000] {subprocess.py:93} INFO - fetched order_items of 74 orders
+[2024-09-09T06:02:40.288+0000] {subprocess.py:93} INFO - fetched order_items of 75 orders
+[2024-09-09T06:02:40.289+0000] {subprocess.py:93} INFO - fetched order_items of 76 orders
+[2024-09-09T06:02:40.289+0000] {subprocess.py:93} INFO - fetched order_items of 77 orders
+[2024-09-09T06:02:40.289+0000] {subprocess.py:93} INFO - fetched order_items of 78 orders
+[2024-09-09T06:02:40.289+0000] {subprocess.py:93} INFO - fetched order_items of 79 orders
+[2024-09-09T06:02:40.289+0000] {subprocess.py:93} INFO - fetched order_items of 80 orders
+[2024-09-09T06:02:40.289+0000] {subprocess.py:93} INFO - fetched order_items of 81 orders
+[2024-09-09T06:02:40.290+0000] {subprocess.py:93} INFO - fetched order_items of 82 orders
+[2024-09-09T06:02:40.290+0000] {subprocess.py:93} INFO - An error occure! status_code : 429
+[2024-09-09T06:02:40.290+0000] {subprocess.py:93} INFO - status_code: 429
+[2024-09-09T06:02:40.290+0000] {subprocess.py:93} INFO - exceeded rate limit, sleeping for 30  seconds before retry 2th time
+[2024-09-09T06:02:40.290+0000] {subprocess.py:93} INFO - fetched order_items of 83 orders
+[2024-09-09T06:02:40.290+0000] {subprocess.py:93} INFO - fetched order_items of 84 orders
+[2024-09-09T06:02:40.291+0000] {subprocess.py:93} INFO - fetched order_items of 85 orders
+[2024-09-09T06:02:40.291+0000] {subprocess.py:93} INFO - fetched order_items of 86 orders
+[2024-09-09T06:02:40.291+0000] {subprocess.py:93} INFO - fetched order_items of 87 orders
+[2024-09-09T06:02:40.291+0000] {subprocess.py:93} INFO - fetched order_items of 88 orders
+[2024-09-09T06:02:40.291+0000] {subprocess.py:93} INFO - fetched order_items of 89 orders
+[2024-09-09T06:02:40.292+0000] {subprocess.py:93} INFO - fetched order_items of 90 orders
+[2024-09-09T06:02:40.292+0000] {subprocess.py:93} INFO - fetched order_items of 91 orders
+[2024-09-09T06:02:40.292+0000] {subprocess.py:93} INFO - fetched order_items of 92 orders
+[2024-09-09T06:02:40.292+0000] {subprocess.py:93} INFO - fetched order_items of 93 orders
+[2024-09-09T06:02:40.292+0000] {subprocess.py:93} INFO - fetched order_items of 94 orders
+[2024-09-09T06:02:40.293+0000] {subprocess.py:93} INFO - fetched order_items of 95 orders
+[2024-09-09T06:02:40.293+0000] {subprocess.py:93} INFO - fetched order_items of 96 orders
+[2024-09-09T06:02:40.293+0000] {subprocess.py:93} INFO - fetched order_items of 97 orders
+[2024-09-09T06:02:40.293+0000] {subprocess.py:93} INFO - fetched order_items of 98 orders
+[2024-09-09T06:02:40.293+0000] {subprocess.py:93} INFO - fetched order_items of 99 orders
+[2024-09-09T06:02:40.294+0000] {subprocess.py:93} INFO - fetched order_items of 100 orders
+[2024-09-09T06:02:40.294+0000] {subprocess.py:93} INFO - fetched order_items of 101 orders
+[2024-09-09T06:02:40.294+0000] {subprocess.py:93} INFO - fetched order_items of 102 orders
+[2024-09-09T06:02:40.294+0000] {subprocess.py:93} INFO - Finished!!!
+[2024-09-09T06:02:40.294+0000] {subprocess.py:93} INFO - there are totally 102 orders fetched
+[2024-09-09T06:02:40.295+0000] {subprocess.py:93} INFO - start exporting orders
+[2024-09-09T06:02:40.295+0000] {subprocess.py:93} INFO - Error during insert/update operation: column "A" does not exist
+[2024-09-09T06:02:40.295+0000] {subprocess.py:93} INFO - LINE 4:                 ON CONFLICT ("A", "m", "a", "z", "o", "n", "...
+[2024-09-09T06:02:40.295+0000] {subprocess.py:93} INFO -                                     ^
+[2024-09-09T06:02:40.295+0000] {subprocess.py:93} INFO - 
+[2024-09-09T06:02:40.296+0000] {subprocess.py:93} INFO - start exporting order_items
+[2024-09-09T06:02:40.296+0000] {subprocess.py:93} INFO - Error during insert/update operation: column "o" does not exist
+[2024-09-09T06:02:40.296+0000] {subprocess.py:93} INFO - LINE 4:                 ON CONFLICT ("o", "r", "d", "e", "r", "_", "...
+[2024-09-09T06:02:40.296+0000] {subprocess.py:93} INFO -                                     ^
+[2024-09-09T06:02:40.296+0000] {subprocess.py:93} INFO - 
+[2024-09-09T06:02:40.319+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-09T06:02:40.365+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=run_daily_order_update_dag, task_id=run_daily_order_update_task, execution_date=20240909T040000, start_date=20240909T060000, end_date=20240909T060240
+[2024-09-09T06:02:40.399+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-09-09T06:02:40.412+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check

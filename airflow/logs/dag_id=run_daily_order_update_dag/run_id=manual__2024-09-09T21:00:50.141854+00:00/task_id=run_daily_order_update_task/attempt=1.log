@@ -1,0 +1,30 @@
+[2024-09-09T21:00:51.454+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: run_daily_order_update_dag.run_daily_order_update_task manual__2024-09-09T21:00:50.141854+00:00 [queued]>
+[2024-09-09T21:00:51.460+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: run_daily_order_update_dag.run_daily_order_update_task manual__2024-09-09T21:00:50.141854+00:00 [queued]>
+[2024-09-09T21:00:51.460+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2024-09-09T21:00:51.468+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): run_daily_order_update_task> on 2024-09-09 21:00:50.141854+00:00
+[2024-09-09T21:00:51.482+0000] {standard_task_runner.py:57} INFO - Started process 202 to run task
+[2024-09-09T21:00:51.489+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'run_daily_order_update_dag', 'run_daily_order_update_task', 'manual__2024-09-09T21:00:50.141854+00:00', '--job-id', '268', '--raw', '--subdir', 'DAGS_FOLDER/run_daily_order_update.py', '--cfg-path', '/tmp/tmp8y4r731y']
+[2024-09-09T21:00:51.528+0000] {standard_task_runner.py:85} INFO - Job 268: Subtask run_daily_order_update_task
+[2024-09-09T21:00:51.593+0000] {task_command.py:415} INFO - Running <TaskInstance: run_daily_order_update_dag.run_daily_order_update_task manual__2024-09-09T21:00:50.141854+00:00 [running]> on host 2c451b520589
+[2024-09-09T21:00:51.673+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='run_daily_order_update_dag' AIRFLOW_CTX_TASK_ID='run_daily_order_update_task' AIRFLOW_CTX_EXECUTION_DATE='2024-09-09T21:00:50.141854+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-09T21:00:50.141854+00:00'
+[2024-09-09T21:00:51.675+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-09T21:00:51.676+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'docker exec python-scripts-container python3 /opt/python_scripts/run_fetch_raw_amazon_Orders.py']
+[2024-09-09T21:00:51.684+0000] {subprocess.py:86} INFO - Output:
+[2024-09-09T21:01:00.487+0000] {subprocess.py:93} INFO - fetching data from 2024-09-09 20:15:38 and 2024-09-09 20:30:52
+[2024-09-09T21:01:00.502+0000] {subprocess.py:93} INFO - next_token: None
+[2024-09-09T21:01:00.503+0000] {subprocess.py:93} INFO - chunk finished
+[2024-09-09T21:01:00.504+0000] {subprocess.py:93} INFO - Status Code: 200
+[2024-09-09T21:01:00.504+0000] {subprocess.py:93} INFO - 1 chunk fetched succesfully!
+[2024-09-09T21:01:00.505+0000] {subprocess.py:93} INFO - sleeping for 5 seconds to avoid exceed rate limit
+[2024-09-09T21:01:00.505+0000] {subprocess.py:93} INFO - fetched order_items of 1 orders
+[2024-09-09T21:01:00.514+0000] {subprocess.py:93} INFO - fetched order_items of 2 orders
+[2024-09-09T21:01:00.516+0000] {subprocess.py:93} INFO - Finished!!!
+[2024-09-09T21:01:00.517+0000] {subprocess.py:93} INFO - there are totally 2 orders fetched
+[2024-09-09T21:01:00.517+0000] {subprocess.py:93} INFO - start exporting orders
+[2024-09-09T21:01:00.518+0000] {subprocess.py:93} INFO - Inserted/updated 2 records into the table "vne_dtw"."raw_amazon"."Orders"
+[2024-09-09T21:01:00.518+0000] {subprocess.py:93} INFO - start exporting order_items
+[2024-09-09T21:01:00.519+0000] {subprocess.py:93} INFO - Inserted/updated 3 records into the table "vne_dtw"."raw_amazon"."OrderItems"
+[2024-09-09T21:01:00.562+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-09T21:01:00.617+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=run_daily_order_update_dag, task_id=run_daily_order_update_task, execution_date=20240909T210050, start_date=20240909T210051, end_date=20240909T210100
+[2024-09-09T21:01:00.648+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-09-09T21:01:00.670+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check

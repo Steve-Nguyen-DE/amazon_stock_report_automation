@@ -1,0 +1,17 @@
+[2024-09-10T06:32:48.861+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: run_daily_order_update_dag.update_gsheet_details_sales_last_60_days scheduled__2024-09-10T04:00:00+00:00 [queued]>
+[2024-09-10T06:32:48.866+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: run_daily_order_update_dag.update_gsheet_details_sales_last_60_days scheduled__2024-09-10T04:00:00+00:00 [queued]>
+[2024-09-10T06:32:48.867+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2024-09-10T06:32:48.873+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): update_gsheet_details_sales_last_60_days> on 2024-09-10 04:00:00+00:00
+[2024-09-10T06:32:48.879+0000] {standard_task_runner.py:57} INFO - Started process 216 to run task
+[2024-09-10T06:32:48.884+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'run_daily_order_update_dag', 'update_gsheet_details_sales_last_60_days', 'scheduled__2024-09-10T04:00:00+00:00', '--job-id', '311', '--raw', '--subdir', 'DAGS_FOLDER/run_daily_order_update.py', '--cfg-path', '/tmp/tmpl5k5q4f6']
+[2024-09-10T06:32:48.890+0000] {standard_task_runner.py:85} INFO - Job 311: Subtask update_gsheet_details_sales_last_60_days
+[2024-09-10T06:32:48.931+0000] {task_command.py:415} INFO - Running <TaskInstance: run_daily_order_update_dag.update_gsheet_details_sales_last_60_days scheduled__2024-09-10T04:00:00+00:00 [running]> on host 5c121da44a2d
+[2024-09-10T06:32:48.986+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='run_daily_order_update_dag' AIRFLOW_CTX_TASK_ID='update_gsheet_details_sales_last_60_days' AIRFLOW_CTX_EXECUTION_DATE='2024-09-10T04:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-10T04:00:00+00:00'
+[2024-09-10T06:32:48.988+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-10T06:32:48.988+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'docker exec python-scripts-container python3 /opt/python_scripts/run_update_gsheet_details_sales_last_60_days.py']
+[2024-09-10T06:32:48.994+0000] {subprocess.py:86} INFO - Output:
+[2024-09-10T06:33:01.158+0000] {subprocess.py:93} INFO - Data successfully exported to orders_last_60_days
+[2024-09-10T06:33:01.283+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-10T06:33:01.328+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=run_daily_order_update_dag, task_id=update_gsheet_details_sales_last_60_days, execution_date=20240910T040000, start_date=20240910T063248, end_date=20240910T063301
+[2024-09-10T06:33:01.374+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-09-10T06:33:01.388+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check

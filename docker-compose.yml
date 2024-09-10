@@ -1,0 +1,97 @@
+version: '3.8'
+
+services:
+  airflow-webserver:
+    build:
+      context: ./airflow
+      dockerfile: Dockerfile
+    container_name: airflow-webserver
+    restart: always
+    depends_on:
+      - postgres
+    environment:
+      - AIRFLOW__CORE__FERNET_KEY=u2VSWJFsBDdQsr7eckfhIB9MSNIkSQlzfxcdJtBgzJU=
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor  # You can replace this with CeleryExecutor or others for scaling
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      - AIRFLOW__WEBSERVER__SECRET_KEY=<your-generated-secret-key>
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/config/airflow.cfg:/opt/airflow/airflow.cfg
+      - /var/run/docker.sock:/var/run/docker.sock
+
+    ports:
+      - "8080:8080"
+    networks:
+      - airflow_network
+
+  airflow-scheduler:
+    build:
+      context: ./airflow
+      dockerfile: Dockerfile
+    container_name: airflow-scheduler
+    restart: always
+    depends_on:
+      - postgres
+    environment:
+      - AIRFLOW__CORE__FERNET_KEY=u2VSWJFsBDdQsr7eckfhIB9MSNIkSQlzfxcdJtBgzJU=
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_POOL_RECYCLE=1800
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/config/airflow.cfg:/opt/airflow/airflow.cfg
+      - /var/run/docker.sock:/var/run/docker.sock
+
+    command: bash -c "airflow db init && airflow scheduler"
+    networks:
+      - airflow_network
+    mem_limit: 2g
+
+  dbt_service:
+    build:
+      context: ./dbt/ # Point to the folder containing the Dockerfile
+    container_name: dbt_container
+    depends_on:
+      - airflow-webserver  # Assuming you have an Airflow service in the same network
+    networks:
+      - airflow_network  # Use the same network as Airflow or other services
+    restart: unless-stopped
+
+  python_scripts:
+    build:
+      context: ./python_scripts
+    container_name: python-scripts-container
+
+
+  postgres:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=airflow
+      - POSTGRES_PASSWORD=airflow
+      - POSTGRES_DB=airflow
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - airflow_network
+
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    volumes:
+      - ./airflow/nginx/nginx.conf:/etc/nginx/nginx.conf 
+    ports:
+      - "8081:8081"
+    depends_on:
+      - airflow-webserver
+    networks:
+      - airflow_network
+
+volumes:
+  postgres_data:
+
+networks:
+  airflow_network:
+    driver: bridge

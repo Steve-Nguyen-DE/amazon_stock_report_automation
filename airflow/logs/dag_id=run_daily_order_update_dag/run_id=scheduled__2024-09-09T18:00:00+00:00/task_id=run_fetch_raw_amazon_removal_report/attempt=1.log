@@ -1,0 +1,61 @@
+[2024-09-09T20:14:18.481+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: run_daily_order_update_dag.run_fetch_raw_amazon_removal_report scheduled__2024-09-09T18:00:00+00:00 [queued]>
+[2024-09-09T20:14:18.519+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: run_daily_order_update_dag.run_fetch_raw_amazon_removal_report scheduled__2024-09-09T18:00:00+00:00 [queued]>
+[2024-09-09T20:14:18.521+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2024-09-09T20:14:18.548+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): run_fetch_raw_amazon_removal_report> on 2024-09-09 18:00:00+00:00
+[2024-09-09T20:14:18.579+0000] {standard_task_runner.py:57} INFO - Started process 185 to run task
+[2024-09-09T20:14:18.586+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'run_daily_order_update_dag', 'run_fetch_raw_amazon_removal_report', 'scheduled__2024-09-09T18:00:00+00:00', '--job-id', '246', '--raw', '--subdir', 'DAGS_FOLDER/run_daily_order_update.py', '--cfg-path', '/tmp/tmprdfifxd3']
+[2024-09-09T20:14:18.594+0000] {standard_task_runner.py:85} INFO - Job 246: Subtask run_fetch_raw_amazon_removal_report
+[2024-09-09T20:14:18.701+0000] {task_command.py:415} INFO - Running <TaskInstance: run_daily_order_update_dag.run_fetch_raw_amazon_removal_report scheduled__2024-09-09T18:00:00+00:00 [running]> on host 2c451b520589
+[2024-09-09T20:14:18.864+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='run_daily_order_update_dag' AIRFLOW_CTX_TASK_ID='run_fetch_raw_amazon_removal_report' AIRFLOW_CTX_EXECUTION_DATE='2024-09-09T18:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-09T18:00:00+00:00'
+[2024-09-09T20:14:18.868+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-09T20:14:18.872+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'docker exec python-scripts-container python3 /opt/python_scripts/run_fetch_raw_amazon_removal_report.py']
+[2024-09-09T20:14:18.886+0000] {subprocess.py:86} INFO - Output:
+[2024-09-09T20:14:48.022+0000] {subprocess.py:93} INFO - Report status is IN_QUEUE, retrying... (1/60)
+[2024-09-09T20:14:48.130+0000] {subprocess.py:93} INFO - Report status is IN_QUEUE, retrying... (2/60)
+[2024-09-09T20:14:48.137+0000] {subprocess.py:93} INFO - Report status is IN_PROGRESS, retrying... (3/60)
+[2024-09-09T20:14:48.148+0000] {subprocess.py:93} INFO - Report status is IN_PROGRESS, retrying... (4/60)
+[2024-09-09T20:14:48.155+0000] {subprocess.py:93} INFO - Inserted/updated 11 records into the table "vne_dtw"."raw_amazon"."Removal"
+[2024-09-09T20:14:48.781+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-09T20:14:49.524+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=run_daily_order_update_dag, task_id=run_fetch_raw_amazon_removal_report, execution_date=20240909T180000, start_date=20240909T201418, end_date=20240909T201449
+[2024-09-09T20:14:49.862+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-09-09T20:14:50.218+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-09T20:27:45.242+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: run_daily_order_update_dag.run_fetch_raw_amazon_removal_report scheduled__2024-09-09T18:00:00+00:00 [queued]>
+[2024-09-09T20:27:45.250+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: run_daily_order_update_dag.run_fetch_raw_amazon_removal_report scheduled__2024-09-09T18:00:00+00:00 [queued]>
+[2024-09-09T20:27:45.250+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2024-09-09T20:27:45.267+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): run_fetch_raw_amazon_removal_report> on 2024-09-09 18:00:00+00:00
+[2024-09-09T20:27:45.287+0000] {standard_task_runner.py:57} INFO - Started process 318 to run task
+[2024-09-09T20:27:45.294+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'run_daily_order_update_dag', 'run_fetch_raw_amazon_removal_report', 'scheduled__2024-09-09T18:00:00+00:00', '--job-id', '250', '--raw', '--subdir', 'DAGS_FOLDER/run_daily_order_update.py', '--cfg-path', '/tmp/tmph6dle3pi']
+[2024-09-09T20:27:45.298+0000] {standard_task_runner.py:85} INFO - Job 250: Subtask run_fetch_raw_amazon_removal_report
+[2024-09-09T20:27:45.367+0000] {task_command.py:415} INFO - Running <TaskInstance: run_daily_order_update_dag.run_fetch_raw_amazon_removal_report scheduled__2024-09-09T18:00:00+00:00 [running]> on host 2c451b520589
+[2024-09-09T20:27:45.448+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='run_daily_order_update_dag' AIRFLOW_CTX_TASK_ID='run_fetch_raw_amazon_removal_report' AIRFLOW_CTX_EXECUTION_DATE='2024-09-09T18:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-09T18:00:00+00:00'
+[2024-09-09T20:27:45.450+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-09T20:27:45.451+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'docker exec python-scripts-container python3 /opt/python_scripts/run_fetch_raw_amazon_removal_report.py']
+[2024-09-09T20:27:45.459+0000] {subprocess.py:86} INFO - Output:
+[2024-09-09T20:28:06.135+0000] {subprocess.py:93} INFO - Report status is IN_QUEUE, retrying... (1/60)
+[2024-09-09T20:28:06.147+0000] {subprocess.py:93} INFO - Report status is IN_PROGRESS, retrying... (2/60)
+[2024-09-09T20:28:06.148+0000] {subprocess.py:93} INFO - Report status is IN_PROGRESS, retrying... (3/60)
+[2024-09-09T20:28:06.148+0000] {subprocess.py:93} INFO - Report was broken, report status: 'FATAL'
+[2024-09-09T20:28:06.244+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-09T20:28:06.279+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=run_daily_order_update_dag, task_id=run_fetch_raw_amazon_removal_report, execution_date=20240909T180000, start_date=20240909T202745, end_date=20240909T202806
+[2024-09-09T20:28:06.322+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-09-09T20:28:06.338+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-09T20:31:03.611+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: run_daily_order_update_dag.run_fetch_raw_amazon_removal_report scheduled__2024-09-09T18:00:00+00:00 [queued]>
+[2024-09-09T20:31:03.617+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: run_daily_order_update_dag.run_fetch_raw_amazon_removal_report scheduled__2024-09-09T18:00:00+00:00 [queued]>
+[2024-09-09T20:31:03.617+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2024-09-09T20:31:03.628+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): run_fetch_raw_amazon_removal_report> on 2024-09-09 18:00:00+00:00
+[2024-09-09T20:31:03.634+0000] {standard_task_runner.py:57} INFO - Started process 397 to run task
+[2024-09-09T20:31:03.648+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'run_daily_order_update_dag', 'run_fetch_raw_amazon_removal_report', 'scheduled__2024-09-09T18:00:00+00:00', '--job-id', '260', '--raw', '--subdir', 'DAGS_FOLDER/run_daily_order_update.py', '--cfg-path', '/tmp/tmpmm4biczd']
+[2024-09-09T20:31:03.660+0000] {standard_task_runner.py:85} INFO - Job 260: Subtask run_fetch_raw_amazon_removal_report
+[2024-09-09T20:31:03.707+0000] {task_command.py:415} INFO - Running <TaskInstance: run_daily_order_update_dag.run_fetch_raw_amazon_removal_report scheduled__2024-09-09T18:00:00+00:00 [running]> on host 2c451b520589
+[2024-09-09T20:31:03.759+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='run_daily_order_update_dag' AIRFLOW_CTX_TASK_ID='run_fetch_raw_amazon_removal_report' AIRFLOW_CTX_EXECUTION_DATE='2024-09-09T18:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-09T18:00:00+00:00'
+[2024-09-09T20:31:03.762+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-09T20:31:03.766+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'docker exec python-scripts-container python3 /opt/python_scripts/run_fetch_raw_amazon_removal_report.py']
+[2024-09-09T20:31:03.780+0000] {subprocess.py:86} INFO - Output:
+[2024-09-09T20:31:23.651+0000] {subprocess.py:93} INFO - Report status is IN_QUEUE, retrying... (1/60)
+[2024-09-09T20:31:23.658+0000] {subprocess.py:93} INFO - Report status is IN_QUEUE, retrying... (2/60)
+[2024-09-09T20:31:23.659+0000] {subprocess.py:93} INFO - Report status is IN_PROGRESS, retrying... (3/60)
+[2024-09-09T20:31:23.659+0000] {subprocess.py:93} INFO - Report was broken, report status: 'FATAL'
+[2024-09-09T20:31:23.755+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-09T20:31:23.784+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=run_daily_order_update_dag, task_id=run_fetch_raw_amazon_removal_report, execution_date=20240909T180000, start_date=20240909T203103, end_date=20240909T203123
+[2024-09-09T20:31:23.807+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-09-09T20:31:23.821+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check

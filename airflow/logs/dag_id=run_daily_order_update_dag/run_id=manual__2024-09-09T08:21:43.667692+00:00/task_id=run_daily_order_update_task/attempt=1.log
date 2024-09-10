@@ -1,0 +1,22 @@
+[2024-09-09T08:21:45.081+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: run_daily_order_update_dag.run_daily_order_update_task manual__2024-09-09T08:21:43.667692+00:00 [queued]>
+[2024-09-09T08:21:45.085+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: run_daily_order_update_dag.run_daily_order_update_task manual__2024-09-09T08:21:43.667692+00:00 [queued]>
+[2024-09-09T08:21:45.085+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2024-09-09T08:21:45.091+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): run_daily_order_update_task> on 2024-09-09 08:21:43.667692+00:00
+[2024-09-09T08:21:45.094+0000] {standard_task_runner.py:57} INFO - Started process 1853 to run task
+[2024-09-09T08:21:45.097+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'run_daily_order_update_dag', 'run_daily_order_update_task', 'manual__2024-09-09T08:21:43.667692+00:00', '--job-id', '231', '--raw', '--subdir', 'DAGS_FOLDER/run_daily_order_update.py', '--cfg-path', '/tmp/tmpmm5oo7km']
+[2024-09-09T08:21:45.099+0000] {standard_task_runner.py:85} INFO - Job 231: Subtask run_daily_order_update_task
+[2024-09-09T08:21:45.143+0000] {task_command.py:415} INFO - Running <TaskInstance: run_daily_order_update_dag.run_daily_order_update_task manual__2024-09-09T08:21:43.667692+00:00 [running]> on host 5c121da44a2d
+[2024-09-09T08:21:45.192+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='run_daily_order_update_dag' AIRFLOW_CTX_TASK_ID='run_daily_order_update_task' AIRFLOW_CTX_EXECUTION_DATE='2024-09-09T08:21:43.667692+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-09T08:21:43.667692+00:00'
+[2024-09-09T08:21:45.193+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-09T08:21:45.194+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'docker exec python-scripts-container python3 /opt/python_scripts/run_fetch_raw_amazon_Orders.py']
+[2024-09-09T08:21:45.199+0000] {subprocess.py:86} INFO - Output:
+[2024-09-09T08:23:05.840+0000] {subprocess.py:97} INFO - Command exited with return code 137
+[2024-09-09T08:23:05.899+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 137.
+[2024-09-09T08:23:05.907+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=run_daily_order_update_dag, task_id=run_daily_order_update_task, execution_date=20240909T082143, start_date=20240909T082145, end_date=20240909T082305
+[2024-09-09T08:23:05.926+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 231 for task run_daily_order_update_task (Bash command failed. The command returned a non-zero exit code 137.; 1853)
+[2024-09-09T08:23:05.952+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2024-09-09T08:23:05.991+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check

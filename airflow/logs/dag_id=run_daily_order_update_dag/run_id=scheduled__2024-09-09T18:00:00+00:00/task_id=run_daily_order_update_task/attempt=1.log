@@ -1,0 +1,111 @@
+[2024-09-09T20:14:18.494+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: run_daily_order_update_dag.run_daily_order_update_task scheduled__2024-09-09T18:00:00+00:00 [queued]>
+[2024-09-09T20:14:18.519+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: run_daily_order_update_dag.run_daily_order_update_task scheduled__2024-09-09T18:00:00+00:00 [queued]>
+[2024-09-09T20:14:18.521+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2024-09-09T20:14:18.573+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): run_daily_order_update_task> on 2024-09-09 18:00:00+00:00
+[2024-09-09T20:14:18.593+0000] {standard_task_runner.py:57} INFO - Started process 186 to run task
+[2024-09-09T20:14:18.602+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'run_daily_order_update_dag', 'run_daily_order_update_task', 'scheduled__2024-09-09T18:00:00+00:00', '--job-id', '244', '--raw', '--subdir', 'DAGS_FOLDER/run_daily_order_update.py', '--cfg-path', '/tmp/tmp5ykzh1t5']
+[2024-09-09T20:14:18.609+0000] {standard_task_runner.py:85} INFO - Job 244: Subtask run_daily_order_update_task
+[2024-09-09T20:14:18.747+0000] {task_command.py:415} INFO - Running <TaskInstance: run_daily_order_update_dag.run_daily_order_update_task scheduled__2024-09-09T18:00:00+00:00 [running]> on host 2c451b520589
+[2024-09-09T20:14:18.913+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='run_daily_order_update_dag' AIRFLOW_CTX_TASK_ID='run_daily_order_update_task' AIRFLOW_CTX_EXECUTION_DATE='2024-09-09T18:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-09T18:00:00+00:00'
+[2024-09-09T20:14:18.921+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-09T20:14:18.921+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'docker exec python-scripts-container python3 /opt/python_scripts/run_fetch_raw_amazon_Orders.py']
+[2024-09-09T20:14:18.930+0000] {subprocess.py:86} INFO - Output:
+[2024-09-09T20:14:43.680+0000] {subprocess.py:93} INFO - fetching data from 2024-09-09 12:42:39 and 2024-09-09 19:44:19
+[2024-09-09T20:14:43.691+0000] {subprocess.py:93} INFO - {'BuyerInfo': {}, 'AmazonOrderId': '112-5779743-8772207', 'EarliestShipDate': '2024-09-20T07:00:00Z', 'SalesChannel': 'Amazon.com', 'OrderStatus': 'Pending', 'NumberOfItemsShipped': 0, 'OrderType': 'StandardOrder', 'IsPremiumOrder': False, 'IsPrime': False, 'FulfillmentChannel': 'AFN', 'NumberOfItemsUnshipped': 3, 'HasRegulatedItems': False, 'IsReplacementOrder': 'false', 'IsSoldByAB': False, 'LatestShipDate': '2024-09-20T07:00:00Z', 'ShipServiceLevel': 'Standard', 'IsISPU': False, 'MarketplaceId': 'ATVPDKIKX0DER', 'PurchaseDate': '2024-09-09T13:38:35Z', 'IsAccessPointOrder': False, 'SellerOrderId': '112-5779743-8772207', 'PaymentMethod': 'Other', 'IsBusinessOrder': False, 'PaymentMethodDetails': ['Standard'], 'IsGlobalExpressEnabled': False, 'LastUpdateDate': '2024-09-09T13:38:43Z', 'ShipmentServiceLevelCategory': 'Standard'}
+[2024-09-09T20:14:43.695+0000] {subprocess.py:93} INFO - next_token: None
+[2024-09-09T20:14:43.701+0000] {subprocess.py:93} INFO - chunk finished
+[2024-09-09T20:14:43.702+0000] {subprocess.py:93} INFO - Status Code: 200
+[2024-09-09T20:14:43.704+0000] {subprocess.py:93} INFO - 1 chunk fetched succesfully!
+[2024-09-09T20:14:43.708+0000] {subprocess.py:93} INFO - sleeping for 5 seconds to avoid exceed rate limit
+[2024-09-09T20:14:43.709+0000] {subprocess.py:93} INFO - fetched order_items of 1 orders
+[2024-09-09T20:14:43.712+0000] {subprocess.py:93} INFO - fetched order_items of 2 orders
+[2024-09-09T20:14:43.713+0000] {subprocess.py:93} INFO - fetched order_items of 3 orders
+[2024-09-09T20:14:43.714+0000] {subprocess.py:93} INFO - fetched order_items of 4 orders
+[2024-09-09T20:14:43.716+0000] {subprocess.py:93} INFO - fetched order_items of 5 orders
+[2024-09-09T20:14:43.716+0000] {subprocess.py:93} INFO - fetched order_items of 6 orders
+[2024-09-09T20:14:43.717+0000] {subprocess.py:93} INFO - fetched order_items of 7 orders
+[2024-09-09T20:14:43.717+0000] {subprocess.py:93} INFO - fetched order_items of 8 orders
+[2024-09-09T20:14:43.719+0000] {subprocess.py:93} INFO - fetched order_items of 9 orders
+[2024-09-09T20:14:43.719+0000] {subprocess.py:93} INFO - fetched order_items of 10 orders
+[2024-09-09T20:14:43.719+0000] {subprocess.py:93} INFO - fetched order_items of 11 orders
+[2024-09-09T20:14:43.719+0000] {subprocess.py:93} INFO - fetched order_items of 12 orders
+[2024-09-09T20:14:43.719+0000] {subprocess.py:93} INFO - fetched order_items of 13 orders
+[2024-09-09T20:14:43.720+0000] {subprocess.py:93} INFO - fetched order_items of 14 orders
+[2024-09-09T20:14:43.720+0000] {subprocess.py:93} INFO - fetched order_items of 15 orders
+[2024-09-09T20:14:43.723+0000] {subprocess.py:93} INFO - fetched order_items of 16 orders
+[2024-09-09T20:14:43.723+0000] {subprocess.py:93} INFO - fetched order_items of 17 orders
+[2024-09-09T20:14:43.723+0000] {subprocess.py:93} INFO - fetched order_items of 18 orders
+[2024-09-09T20:14:43.723+0000] {subprocess.py:93} INFO - fetched order_items of 19 orders
+[2024-09-09T20:14:43.723+0000] {subprocess.py:93} INFO - fetched order_items of 20 orders
+[2024-09-09T20:14:43.723+0000] {subprocess.py:93} INFO - Finished!!!
+[2024-09-09T20:14:43.723+0000] {subprocess.py:93} INFO - there are totally 20 orders fetched
+[2024-09-09T20:14:43.727+0000] {subprocess.py:93} INFO - start exporting orders
+[2024-09-09T20:14:43.730+0000] {subprocess.py:93} INFO - Inserted/updated 20 records into the table "vne_dtw"."raw_amazon"."Orders"
+[2024-09-09T20:14:43.731+0000] {subprocess.py:93} INFO - start exporting order_items
+[2024-09-09T20:14:43.734+0000] {subprocess.py:93} INFO - Inserted/updated 20 records into the table "vne_dtw"."raw_amazon"."OrderItems"
+[2024-09-09T20:14:43.838+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-09-09T20:14:44.262+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=run_daily_order_update_dag, task_id=run_daily_order_update_task, execution_date=20240909T180000, start_date=20240909T201418, end_date=20240909T201444
+[2024-09-09T20:14:44.437+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-09-09T20:14:44.642+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-09T20:27:45.242+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: run_daily_order_update_dag.run_daily_order_update_task scheduled__2024-09-09T18:00:00+00:00 [queued]>
+[2024-09-09T20:27:45.250+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: run_daily_order_update_dag.run_daily_order_update_task scheduled__2024-09-09T18:00:00+00:00 [queued]>
+[2024-09-09T20:27:45.250+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2024-09-09T20:27:45.262+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): run_daily_order_update_task> on 2024-09-09 18:00:00+00:00
+[2024-09-09T20:27:45.287+0000] {standard_task_runner.py:57} INFO - Started process 319 to run task
+[2024-09-09T20:27:45.298+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'run_daily_order_update_dag', 'run_daily_order_update_task', 'scheduled__2024-09-09T18:00:00+00:00', '--job-id', '251', '--raw', '--subdir', 'DAGS_FOLDER/run_daily_order_update.py', '--cfg-path', '/tmp/tmptk3mk82d']
+[2024-09-09T20:27:45.304+0000] {standard_task_runner.py:85} INFO - Job 251: Subtask run_daily_order_update_task
+[2024-09-09T20:27:45.374+0000] {task_command.py:415} INFO - Running <TaskInstance: run_daily_order_update_dag.run_daily_order_update_task scheduled__2024-09-09T18:00:00+00:00 [running]> on host 2c451b520589
+[2024-09-09T20:27:45.447+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='run_daily_order_update_dag' AIRFLOW_CTX_TASK_ID='run_daily_order_update_task' AIRFLOW_CTX_EXECUTION_DATE='2024-09-09T18:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-09T18:00:00+00:00'
+[2024-09-09T20:27:45.450+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-09T20:27:45.453+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'docker exec python-scripts-container python3 /opt/python_scripts/run_fetch_raw_amazon_Orders.py']
+[2024-09-09T20:27:45.464+0000] {subprocess.py:86} INFO - Output:
+[2024-09-09T20:27:47.598+0000] {subprocess.py:93} INFO - fetching data from 2024-09-09 19:41:07 and 2024-09-09 19:57:46
+[2024-09-09T20:27:47.605+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2024-09-09T20:27:47.606+0000] {subprocess.py:93} INFO -   File "/opt/python_scripts/run_fetch_raw_amazon_Orders.py", line 26, in <module>
+[2024-09-09T20:27:47.607+0000] {subprocess.py:93} INFO -     orders = LongPeriodOrdersFetcher(LastUpdatedAfter, LastUpdatedBefore).GetOrdersInLongPeriod()
+[2024-09-09T20:27:47.607+0000] {subprocess.py:93} INFO -   File "/opt/python_scripts/utils/amz_orders_fetcher.py", line 84, in GetOrdersInLongPeriod
+[2024-09-09T20:27:47.608+0000] {subprocess.py:93} INFO -     orders, status_code = self.GetOrders()
+[2024-09-09T20:27:47.608+0000] {subprocess.py:93} INFO -   File "/opt/python_scripts/utils/amz_orders_fetcher.py", line 35, in GetOrders
+[2024-09-09T20:27:47.609+0000] {subprocess.py:93} INFO -     print(orders[1])
+[2024-09-09T20:27:47.609+0000] {subprocess.py:93} INFO - IndexError: list index out of range
+[2024-09-09T20:27:47.665+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2024-09-09T20:27:47.756+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2024-09-09T20:27:47.761+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=run_daily_order_update_dag, task_id=run_daily_order_update_task, execution_date=20240909T180000, start_date=20240909T202745, end_date=20240909T202747
+[2024-09-09T20:27:47.797+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 251 for task run_daily_order_update_task (Bash command failed. The command returned a non-zero exit code 1.; 319)
+[2024-09-09T20:27:47.861+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2024-09-09T20:27:47.916+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-09T20:31:03.612+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: run_daily_order_update_dag.run_daily_order_update_task scheduled__2024-09-09T18:00:00+00:00 [queued]>
+[2024-09-09T20:31:03.617+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: run_daily_order_update_dag.run_daily_order_update_task scheduled__2024-09-09T18:00:00+00:00 [queued]>
+[2024-09-09T20:31:03.618+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2024-09-09T20:31:03.626+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): run_daily_order_update_task> on 2024-09-09 18:00:00+00:00
+[2024-09-09T20:31:03.634+0000] {standard_task_runner.py:57} INFO - Started process 398 to run task
+[2024-09-09T20:31:03.645+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'run_daily_order_update_dag', 'run_daily_order_update_task', 'scheduled__2024-09-09T18:00:00+00:00', '--job-id', '259', '--raw', '--subdir', 'DAGS_FOLDER/run_daily_order_update.py', '--cfg-path', '/tmp/tmpwla9k9zv']
+[2024-09-09T20:31:03.657+0000] {standard_task_runner.py:85} INFO - Job 259: Subtask run_daily_order_update_task
+[2024-09-09T20:31:03.703+0000] {task_command.py:415} INFO - Running <TaskInstance: run_daily_order_update_dag.run_daily_order_update_task scheduled__2024-09-09T18:00:00+00:00 [running]> on host 2c451b520589
+[2024-09-09T20:31:03.749+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='run_daily_order_update_dag' AIRFLOW_CTX_TASK_ID='run_daily_order_update_task' AIRFLOW_CTX_EXECUTION_DATE='2024-09-09T18:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-09T18:00:00+00:00'
+[2024-09-09T20:31:03.753+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-09-09T20:31:03.756+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'docker exec python-scripts-container python3 /opt/python_scripts/run_fetch_raw_amazon_Orders.py']
+[2024-09-09T20:31:03.770+0000] {subprocess.py:86} INFO - Output:
+[2024-09-09T20:31:05.183+0000] {subprocess.py:93} INFO - fetching data from 2024-09-09 19:41:07 and 2024-09-09 20:01:04
+[2024-09-09T20:31:05.191+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2024-09-09T20:31:05.191+0000] {subprocess.py:93} INFO -   File "/opt/python_scripts/run_fetch_raw_amazon_Orders.py", line 26, in <module>
+[2024-09-09T20:31:05.192+0000] {subprocess.py:93} INFO -     orders = LongPeriodOrdersFetcher(LastUpdatedAfter, LastUpdatedBefore).GetOrdersInLongPeriod()
+[2024-09-09T20:31:05.192+0000] {subprocess.py:93} INFO -   File "/opt/python_scripts/utils/amz_orders_fetcher.py", line 84, in GetOrdersInLongPeriod
+[2024-09-09T20:31:05.192+0000] {subprocess.py:93} INFO -     orders, status_code = self.GetOrders()
+[2024-09-09T20:31:05.193+0000] {subprocess.py:93} INFO -   File "/opt/python_scripts/utils/amz_orders_fetcher.py", line 35, in GetOrders
+[2024-09-09T20:31:05.193+0000] {subprocess.py:93} INFO -     print(orders[1])
+[2024-09-09T20:31:05.193+0000] {subprocess.py:93} INFO - IndexError: list index out of range
+[2024-09-09T20:31:05.240+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2024-09-09T20:31:05.277+0000] {taskinstance.py:1943} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2024-09-09T20:31:05.283+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=run_daily_order_update_dag, task_id=run_daily_order_update_task, execution_date=20240909T180000, start_date=20240909T203103, end_date=20240909T203105
+[2024-09-09T20:31:05.295+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 259 for task run_daily_order_update_task (Bash command failed. The command returned a non-zero exit code 1.; 398)
+[2024-09-09T20:31:05.335+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2024-09-09T20:31:05.362+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check

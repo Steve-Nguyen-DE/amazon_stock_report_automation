@@ -1,0 +1,12 @@
+bt_vne:
+  outputs:
+    dev:
+      dbname: vne_dtw
+      host: '136.244.88.999'
+      pass: 'password$'
+      port: 5432  # Corrected: Changed from string to integer
+      schema: 'schema'
+      threads: 4  # Corrected: 'threads' should be an integer, not 'postgres'
+      type: postgres
+      user: postgres
+  target: dev

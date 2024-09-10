@@ -1,0 +1,21 @@
+version: 1
+
+models:
+  - name: src_Amz_Order_items
+  - name: src_Amz_Orders
+
+sources:
+  - name: vne
+    quoting: 
+      database: true 
+      schema: true
+      identifier: true
+    database: vne_dtw
+    schema: raw_amazon
+    tables: 
+      - name: OrderItems
+      - name: Orders
+      - name: Removal
+      - name: Returns
+      - name: VneAmzProducts
+      - name: VneAmzPurchasingOrdersDetail

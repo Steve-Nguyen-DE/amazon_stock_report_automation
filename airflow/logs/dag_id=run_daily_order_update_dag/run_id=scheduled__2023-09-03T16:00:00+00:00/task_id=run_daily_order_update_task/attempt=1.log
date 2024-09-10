@@ -1,0 +1,10 @@
+[2024-09-02T21:01:00.674+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: run_daily_order_update_dag.run_daily_order_update_task scheduled__2023-09-03T16:00:00+00:00 [queued]>
+[2024-09-02T21:01:00.691+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: run_daily_order_update_dag.run_daily_order_update_task scheduled__2023-09-03T16:00:00+00:00 [queued]>
+[2024-09-02T21:01:00.695+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2024-09-02T21:01:00.764+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): run_daily_order_update_task> on 2023-09-03 16:00:00+00:00
+[2024-09-02T21:01:00.772+0000] {standard_task_runner.py:57} INFO - Started process 347 to run task
+[2024-09-02T21:01:00.778+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'run_daily_order_update_dag', 'run_daily_order_update_task', 'scheduled__2023-09-03T16:00:00+00:00', '--job-id', '35', '--raw', '--subdir', 'DAGS_FOLDER/run_daily_order_update.py', '--cfg-path', '/tmp/tmpzokx4jd1']
+[2024-09-02T21:01:00.783+0000] {standard_task_runner.py:85} INFO - Job 35: Subtask run_daily_order_update_task
+[2024-09-02T21:01:00.806+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 35 for task run_daily_order_update_task (invalid interpolation syntax in '[%(asctime)s] {%(filename)s:%(lineno)d} %(levelname)s - %(message)s' at position 5; 347)
+[2024-09-02T21:01:00.836+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2024-09-02T21:01:00.900+0000] {taskinstance.py:2784} INFO - 0 downstream tasks scheduled from follow-on schedule check
