@@ -7600,3 +7600,129 @@
 [2024-09-10T11:39:08.451+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/run_daily_order_update.py took 0.141 seconds
 [2024-09-10T11:39:08.455+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:39:08.455+0000] {dag.py:3677} INFO - Setting next_dagrun for run_daily_order_update_dag to 2024-09-10T10:00:00+00:00, run_after=2024-09-10T12:00:00+00:00
 [2024-09-10T11:39:08.466+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/run_daily_order_update.py took 0.156 seconds
+[2024-09-10T11:39:38.687+0000] {processor.py:157} INFO - Started process (PID=3068) to work on /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:39:38.691+0000] {processor.py:157} INFO - Started process (PID=2998) to work on /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:39:38.689+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/run_daily_order_update.py for tasks to queue
+[2024-09-10T11:39:38.697+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:39:38.696+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:39:38.693+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/run_daily_order_update.py for tasks to queue
+[2024-09-10T11:39:38.700+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:39:38.700+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:39:38.738+0000] {processor.py:839} INFO - DAG(s) dict_keys(['run_daily_order_update_dag']) retrieved from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:39:38.739+0000] {processor.py:839} INFO - DAG(s) dict_keys(['run_daily_order_update_dag']) retrieved from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:39:38.791+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:39:38.790+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-09-10T11:39:38.793+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:39:38.793+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-09-10T11:39:38.811+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:39:38.811+0000] {dag.py:3677} INFO - Setting next_dagrun for run_daily_order_update_dag to 2024-09-10T10:00:00+00:00, run_after=2024-09-10T12:00:00+00:00
+[2024-09-10T11:39:38.821+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/run_daily_order_update.py took 0.139 seconds
+[2024-09-10T11:39:38.826+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:39:38.826+0000] {dag.py:3677} INFO - Setting next_dagrun for run_daily_order_update_dag to 2024-09-10T10:00:00+00:00, run_after=2024-09-10T12:00:00+00:00
+[2024-09-10T11:39:38.835+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/run_daily_order_update.py took 0.158 seconds
+[2024-09-10T11:40:09.178+0000] {processor.py:157} INFO - Started process (PID=3073) to work on /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:40:09.178+0000] {processor.py:157} INFO - Started process (PID=3003) to work on /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:40:09.184+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/run_daily_order_update.py for tasks to queue
+[2024-09-10T11:40:09.191+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:40:09.190+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:40:09.187+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/run_daily_order_update.py for tasks to queue
+[2024-09-10T11:40:09.193+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:40:09.193+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:40:09.212+0000] {processor.py:839} INFO - DAG(s) dict_keys(['run_daily_order_update_dag']) retrieved from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:40:09.219+0000] {processor.py:839} INFO - DAG(s) dict_keys(['run_daily_order_update_dag']) retrieved from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:40:09.260+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:40:09.260+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-09-10T11:40:09.264+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:40:09.264+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-09-10T11:40:09.283+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:40:09.282+0000] {dag.py:3677} INFO - Setting next_dagrun for run_daily_order_update_dag to 2024-09-10T10:00:00+00:00, run_after=2024-09-10T12:00:00+00:00
+[2024-09-10T11:40:09.293+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/run_daily_order_update.py took 0.122 seconds
+[2024-09-10T11:40:09.300+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:40:09.300+0000] {dag.py:3677} INFO - Setting next_dagrun for run_daily_order_update_dag to 2024-09-10T10:00:00+00:00, run_after=2024-09-10T12:00:00+00:00
+[2024-09-10T11:40:09.308+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/run_daily_order_update.py took 0.136 seconds
+[2024-09-10T11:40:39.627+0000] {processor.py:157} INFO - Started process (PID=3008) to work on /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:40:39.628+0000] {processor.py:157} INFO - Started process (PID=3078) to work on /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:40:39.629+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/run_daily_order_update.py for tasks to queue
+[2024-09-10T11:40:39.635+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:40:39.634+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:40:39.634+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/run_daily_order_update.py for tasks to queue
+[2024-09-10T11:40:39.639+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:40:39.639+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:40:39.661+0000] {processor.py:839} INFO - DAG(s) dict_keys(['run_daily_order_update_dag']) retrieved from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:40:39.664+0000] {processor.py:839} INFO - DAG(s) dict_keys(['run_daily_order_update_dag']) retrieved from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:40:39.700+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:40:39.700+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-09-10T11:40:39.702+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:40:39.702+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-09-10T11:40:39.720+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:40:39.719+0000] {dag.py:3677} INFO - Setting next_dagrun for run_daily_order_update_dag to 2024-09-10T10:00:00+00:00, run_after=2024-09-10T12:00:00+00:00
+[2024-09-10T11:40:39.730+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/run_daily_order_update.py took 0.111 seconds
+[2024-09-10T11:40:39.738+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:40:39.737+0000] {dag.py:3677} INFO - Setting next_dagrun for run_daily_order_update_dag to 2024-09-10T10:00:00+00:00, run_after=2024-09-10T12:00:00+00:00
+[2024-09-10T11:40:39.747+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/run_daily_order_update.py took 0.128 seconds
+[2024-09-10T11:41:10.074+0000] {processor.py:157} INFO - Started process (PID=3083) to work on /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:41:10.075+0000] {processor.py:157} INFO - Started process (PID=3013) to work on /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:41:10.076+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/run_daily_order_update.py for tasks to queue
+[2024-09-10T11:41:10.081+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:41:10.081+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:41:10.079+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/run_daily_order_update.py for tasks to queue
+[2024-09-10T11:41:10.085+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:41:10.085+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:41:10.115+0000] {processor.py:839} INFO - DAG(s) dict_keys(['run_daily_order_update_dag']) retrieved from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:41:10.121+0000] {processor.py:839} INFO - DAG(s) dict_keys(['run_daily_order_update_dag']) retrieved from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:41:10.163+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:41:10.163+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-09-10T11:41:10.166+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:41:10.166+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-09-10T11:41:10.186+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:41:10.186+0000] {dag.py:3677} INFO - Setting next_dagrun for run_daily_order_update_dag to 2024-09-10T10:00:00+00:00, run_after=2024-09-10T12:00:00+00:00
+[2024-09-10T11:41:10.197+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/run_daily_order_update.py took 0.129 seconds
+[2024-09-10T11:41:10.205+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:41:10.205+0000] {dag.py:3677} INFO - Setting next_dagrun for run_daily_order_update_dag to 2024-09-10T10:00:00+00:00, run_after=2024-09-10T12:00:00+00:00
+[2024-09-10T11:41:10.214+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/run_daily_order_update.py took 0.147 seconds
+[2024-09-10T11:41:40.546+0000] {processor.py:157} INFO - Started process (PID=3018) to work on /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:41:40.546+0000] {processor.py:157} INFO - Started process (PID=3088) to work on /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:41:40.549+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/run_daily_order_update.py for tasks to queue
+[2024-09-10T11:41:40.556+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:41:40.556+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:41:40.553+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/run_daily_order_update.py for tasks to queue
+[2024-09-10T11:41:40.558+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:41:40.557+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:41:40.596+0000] {processor.py:839} INFO - DAG(s) dict_keys(['run_daily_order_update_dag']) retrieved from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:41:40.598+0000] {processor.py:839} INFO - DAG(s) dict_keys(['run_daily_order_update_dag']) retrieved from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:41:40.654+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:41:40.654+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-09-10T11:41:40.656+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:41:40.656+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-09-10T11:41:40.676+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:41:40.676+0000] {dag.py:3677} INFO - Setting next_dagrun for run_daily_order_update_dag to 2024-09-10T10:00:00+00:00, run_after=2024-09-10T12:00:00+00:00
+[2024-09-10T11:41:40.688+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/run_daily_order_update.py took 0.149 seconds
+[2024-09-10T11:41:40.694+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:41:40.694+0000] {dag.py:3677} INFO - Setting next_dagrun for run_daily_order_update_dag to 2024-09-10T10:00:00+00:00, run_after=2024-09-10T12:00:00+00:00
+[2024-09-10T11:41:40.704+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/run_daily_order_update.py took 0.165 seconds
+[2024-09-10T11:42:10.953+0000] {processor.py:157} INFO - Started process (PID=3093) to work on /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:42:10.953+0000] {processor.py:157} INFO - Started process (PID=3023) to work on /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:42:10.956+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/run_daily_order_update.py for tasks to queue
+[2024-09-10T11:42:10.966+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/run_daily_order_update.py for tasks to queue
+[2024-09-10T11:42:10.978+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:42:10.976+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:42:10.982+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:42:10.981+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:42:11.172+0000] {processor.py:839} INFO - DAG(s) dict_keys(['run_daily_order_update_dag']) retrieved from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:42:11.187+0000] {processor.py:839} INFO - DAG(s) dict_keys(['run_daily_order_update_dag']) retrieved from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:42:11.292+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:42:11.291+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-09-10T11:42:11.298+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:42:11.298+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-09-10T11:42:11.332+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:42:11.332+0000] {dag.py:3677} INFO - Setting next_dagrun for run_daily_order_update_dag to 2024-09-10T10:00:00+00:00, run_after=2024-09-10T12:00:00+00:00
+[2024-09-10T11:42:11.353+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/run_daily_order_update.py took 0.410 seconds
+[2024-09-10T11:42:11.363+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:42:11.362+0000] {dag.py:3677} INFO - Setting next_dagrun for run_daily_order_update_dag to 2024-09-10T10:00:00+00:00, run_after=2024-09-10T12:00:00+00:00
+[2024-09-10T11:42:11.388+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/run_daily_order_update.py took 0.445 seconds
+[2024-09-10T11:42:41.748+0000] {processor.py:157} INFO - Started process (PID=3028) to work on /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:42:41.748+0000] {processor.py:157} INFO - Started process (PID=3098) to work on /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:42:41.750+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/run_daily_order_update.py for tasks to queue
+[2024-09-10T11:42:41.759+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:42:41.758+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:42:41.754+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/run_daily_order_update.py for tasks to queue
+[2024-09-10T11:42:41.763+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:42:41.763+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:42:41.787+0000] {processor.py:839} INFO - DAG(s) dict_keys(['run_daily_order_update_dag']) retrieved from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:42:41.797+0000] {processor.py:839} INFO - DAG(s) dict_keys(['run_daily_order_update_dag']) retrieved from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:42:41.839+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:42:41.839+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-09-10T11:42:41.842+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:42:41.841+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-09-10T11:42:41.870+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:42:41.870+0000] {dag.py:3677} INFO - Setting next_dagrun for run_daily_order_update_dag to 2024-09-10T10:00:00+00:00, run_after=2024-09-10T12:00:00+00:00
+[2024-09-10T11:42:41.888+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/run_daily_order_update.py took 0.155 seconds
+[2024-09-10T11:42:41.896+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:42:41.896+0000] {dag.py:3677} INFO - Setting next_dagrun for run_daily_order_update_dag to 2024-09-10T10:00:00+00:00, run_after=2024-09-10T12:00:00+00:00
+[2024-09-10T11:42:41.906+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/run_daily_order_update.py took 0.174 seconds
+[2024-09-10T11:43:12.243+0000] {processor.py:157} INFO - Started process (PID=3103) to work on /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:43:12.243+0000] {processor.py:157} INFO - Started process (PID=3033) to work on /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:43:12.246+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/run_daily_order_update.py for tasks to queue
+[2024-09-10T11:43:12.252+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:43:12.252+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:43:12.251+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/run_daily_order_update.py for tasks to queue
+[2024-09-10T11:43:12.257+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:43:12.255+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:43:12.278+0000] {processor.py:839} INFO - DAG(s) dict_keys(['run_daily_order_update_dag']) retrieved from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:43:12.292+0000] {processor.py:839} INFO - DAG(s) dict_keys(['run_daily_order_update_dag']) retrieved from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:43:12.335+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:43:12.334+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-09-10T11:43:12.335+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:43:12.335+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-09-10T11:43:12.355+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:43:12.355+0000] {dag.py:3677} INFO - Setting next_dagrun for run_daily_order_update_dag to 2024-09-10T10:00:00+00:00, run_after=2024-09-10T12:00:00+00:00
+[2024-09-10T11:43:12.367+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/run_daily_order_update.py took 0.131 seconds
+[2024-09-10T11:43:12.372+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:43:12.371+0000] {dag.py:3677} INFO - Setting next_dagrun for run_daily_order_update_dag to 2024-09-10T10:00:00+00:00, run_after=2024-09-10T12:00:00+00:00
+[2024-09-10T11:43:12.380+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/run_daily_order_update.py took 0.145 seconds
+[2024-09-10T11:43:42.713+0000] {processor.py:157} INFO - Started process (PID=3108) to work on /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:43:42.713+0000] {processor.py:157} INFO - Started process (PID=3038) to work on /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:43:42.719+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/run_daily_order_update.py for tasks to queue
+[2024-09-10T11:43:42.716+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/run_daily_order_update.py for tasks to queue
+[2024-09-10T11:43:42.725+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:43:42.725+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:43:42.726+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:43:42.725+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:43:42.768+0000] {processor.py:839} INFO - DAG(s) dict_keys(['run_daily_order_update_dag']) retrieved from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:43:42.771+0000] {processor.py:839} INFO - DAG(s) dict_keys(['run_daily_order_update_dag']) retrieved from /opt/airflow/dags/run_daily_order_update.py
+[2024-09-10T11:43:42.807+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:43:42.807+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-09-10T11:43:42.809+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:43:42.809+0000] {dag.py:2907} INFO - Sync 1 DAGs
+[2024-09-10T11:43:42.839+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:43:42.839+0000] {dag.py:3677} INFO - Setting next_dagrun for run_daily_order_update_dag to 2024-09-10T10:00:00+00:00, run_after=2024-09-10T12:00:00+00:00
+[2024-09-10T11:43:42.852+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/run_daily_order_update.py took 0.158 seconds
+[2024-09-10T11:43:42.859+0000] {logging_mixin.py:151} INFO - [2024-09-10T11:43:42.859+0000] {dag.py:3677} INFO - Setting next_dagrun for run_daily_order_update_dag to 2024-09-10T10:00:00+00:00, run_after=2024-09-10T12:00:00+00:00
+[2024-09-10T11:43:42.869+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/run_daily_order_update.py took 0.175 seconds
