@@ -44,7 +44,7 @@ fetch_raw_amazon_PurchasingOrdersDetail = BashOperator(
 
 dbt_run = BashOperator(
     task_id='dbt_run',
-    bash_command='docker exec dbt_container dbt run --project-dir /opt/dbt_vne/dbt_vne/',
+    bash_command='docker exec dbt_container dbt run --project-dir /opt/dbt_vne/dbt/dbt_vne/',
     dag=dag,
 )
 
